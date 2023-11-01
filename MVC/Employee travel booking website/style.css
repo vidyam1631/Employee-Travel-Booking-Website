@@ -1,0 +1,84 @@
+
+.footer{
+    background-color:#d1c4e9;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px  ;
+}
+
+body{
+    /* margin: 50px 0px  50px 0px ; */
+    z-index: 0;
+}
+.home-page-container{
+    background-image: linear-gradient(rgba(0,0,0, 0.3),rgba(0,0,0, 0.7)),url('architecture-2179228_1280.jpg') ;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff; 
+    padding: 20px;
+}
+
+h1, p {
+    margin: 0;
+}
+.nav-items{
+    padding: 20px;
+}
+.loginBtn, .goBackBtn{
+    float: right;
+}
+footer{
+    background-color: #000;
+    padding: 32px;
+    font-size: 80%;
+    
+}
+.footer-nav li{
+     list-style: none;
+     display: inline-block;
+     color: #d1c4e9;
+     margin-right: 20px;
+}
+.social-links li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+.container{
+    margin: 50px;
+}
+.form-group{
+    display: inline-block;
+}
+.row{
+    padding-top: 30px;
+}
+/* .card-body{
+    padding: 20px;
+} */
+/* .card-body-item{
+    padding: 10px;
+} */
+.table_data{
+    padding: 50px;
+}
+.linkBtn{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    margin: 5px;
+    background-origin: padding-box;
+}
+.linkBtn a{
+    margin: 10px;
+}
