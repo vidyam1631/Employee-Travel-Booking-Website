@@ -1,0 +1,13 @@
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_MainMenu.dll
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_MainMenu.pdb
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_BusinessAccessLayer.dll
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_DataAccessLayer.dll
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_ProjectMenu.dll
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_BusinessAccessLayer.pdb
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_DataAccessLayer.pdb
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\bin\Debug\ClassLibrary_ProjectMenu.pdb
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\obj\Debug\ClassLibrary_MainMenu.csproj.AssemblyReference.cache
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\obj\Debug\ClassLibrary_MainMenu.csproj.CoreCompileInputs.cache
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\obj\Debug\ClassLibrary_MainMenu.csproj.CopyComplete
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\obj\Debug\ClassLibrary_MainMenu.dll
+D:\source\repos\Project_Menu\ClassLibrary_MainMenu\obj\Debug\ClassLibrary_MainMenu.pdb
