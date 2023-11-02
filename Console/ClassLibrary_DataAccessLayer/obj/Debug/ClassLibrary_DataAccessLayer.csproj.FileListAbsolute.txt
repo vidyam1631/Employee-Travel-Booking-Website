@@ -1,0 +1,9 @@
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.AssemblyReference.cache
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_DataAccessLayer.dll
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_DataAccessLayer.pdb
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_ProjectMenu.dll
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_ProjectMenu.pdb
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.CopyComplete
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.dll
+D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.pdb
