@@ -1,0 +1,149 @@
+﻿@model IEnumerable<TravelRequest>
+<h2>List Of TravelRequest</h2>
+
+@{
+    @if (Model != null)
+    {
+        <div>
+            <a href="/TravelRequest/AddTravelRequest"><button class="btn btn-outline-success">Add New TravelRequest</button></a>
+        </div>
+        <br />
+        <table class="table table-bordered table-sm table-striped">
+            <tr>
+                <td>Request Id</td>
+                <td>Employee Id</td>
+                <td>Location From</td>
+                <td>Location To</td>
+                
+                <td>Approval Status</td>
+                <td>Booking Status</td>
+                <td>Current Status</td>
+                <td>Delete</td>
+                <td>Update</td>
+            </tr>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@c.RequestId</td>
+                    <td>@c.EmpId</td>
+                    <td>@c.LocationFrom</td>
+                    <td>@c.LocationTo</td>
+                    
+                    @if (c.ApprovalStatus == "Pending")
+                    {
+                        <td>
+
+                            <a asp-action="ApproveTravelRequest" asp-route-id=@c.RequestId><button class="btn ">Approve</button></a>
+                            
+                        </td>
+                    }
+                    else if (c.ApprovalStatus == "NotApproved")
+                    {
+                        <td>
+
+                            <a>NotApproved</a>
+
+                        </td>
+                    }
+                    else{
+                        <td>
+                            
+                                <a>Approved</a>
+                            
+                        </td>
+                    }
+                    @if (c.ApprovalStatus == "NotApproved")
+                    {
+
+                        <td>
+
+                            <a>NA</a>
+
+                        </td>
+                    }
+                    else if (c.ApprovalStatus == "Approved" && c.BookingStatus == "Pending" )
+                    {
+                        <td>
+
+                            <a asp-action="BookTravelRequest" asp-route-id=@c.RequestId> <button class="btn">Book</button></a>
+                            
+                        </td>
+                    }else if (c.BookingStatus == "NotBooked")
+                    {
+
+                        <td>
+
+                            <a>NotBooked</a>
+
+                        </td>
+            }else if (c.BookingStatus == "Booked")
+            {
+
+            <td>
+
+                <a>Booked</a>
+
+            </td>
+            }
+                    
+                    else
+                    {
+                        <td>
+                            
+                                <a>-</a>
+                            
+                        </td>
+                    }
+                    @if(c.ApprovalStatus=="Approved" && c.BookingStatus=="Booked"){
+                        <td>@c.CurrentStatus</td>
+                    }else if(c.ApprovalStatus=="Not Approved")
+                    {
+                        <td>@c.CurrentStatus</td>
+                    }
+                    else
+                    {
+                        <td>@c.CurrentStatus</td>
+                    }
+
+
+                    @if (c.CurrentStatus == "Open")
+                    {
+                        <td>
+
+                            <a asp-action="DeleteTravelRequest" asp-route-id=@c.RequestId><button class="btn btn-delete">Delete </button></a>
+
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <button class="btn btn-delete" disabled>Delete </button>
+                        </td>
+                    }
+                    @if (c.CurrentStatus == "Open")
+                    {
+                        <td>
+
+                            <a asp-action="UpdateTravelRequest" asp-route-id=@c.RequestId><button class="btn">Update</button></a>
+
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <button class="btn" disabled>Update</button>
+                        </td>
+                    }
+                    
+                </tr>
+            }
+        </table>
+
+    }
+    else
+    {
+        <h3>No TravelRequest to show at this time</h3>
+    }
+   
+}
+

@@ -24,3 +24,19 @@ D:\source\repos\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_BusinessAccessL
 D:\source\repos\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_BusinessAccessLayer.pdb
 D:\source\repos\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_MainMenu.dll
 D:\source\repos\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_MainMenu.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\Project_Menu.exe.config
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\Project_Menu.exe
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\Project_Menu.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_BusinessAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_MainMenu.dll
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_DataAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_ProjectMenu.dll
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_BusinessAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_MainMenu.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_DataAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\bin\Debug\ClassLibrary_ProjectMenu.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\obj\Debug\Project_Menu.csproj.AssemblyReference.cache
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\obj\Debug\Project_Menu.csproj.CoreCompileInputs.cache
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\obj\Debug\Project_Menu.csproj.CopyComplete
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\obj\Debug\Project_Menu.exe
+D:\Employee Travel Booking App\Console\Project_Menu\Project_Menu\obj\Debug\Project_Menu.pdb

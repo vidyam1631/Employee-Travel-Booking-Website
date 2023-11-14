@@ -1,0 +1,104 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+    background-image: url("../Document/Bg.jpg"); /* Assuming the image is in the same folder as your CSS file */
+    background-size: cover;
+    background-position: center;
+
+}
+.welcome-container {
+    text-align: center;
+    margin-top: 150px; /* Adjust the margin as needed to center the content vertically */
+}
+
+.heading {
+    font-family: 'Your-Font-Family', sans-serif; /* Replace 'Your-Font-Family' with the desired font family */
+    font-size: 36px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Adjust the gradient colors and opacity */
+    z-index: 1;
+}
+
+
+body {
+  margin-bottom: 60px;
+}
+
+.table {
+    border: 2px solid #007BFF;
+    background-color: #fff; /* Set a white background color for the table */
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+h2 {
+    color: Black;
+    text-align: center;
+}
+
+.btn {
+    background-color: #007BFF; /* Dark blue background color for buttons */
+    color: #fff;
+    border: none; /* Remove button border */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red background color for delete button */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue background color on hover for non-delete buttons */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.form-container {
+    max-width: 50%;
+    margin: auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    align-content:center;
+    display: inline-flex;
+    line-height: 50px; /* Adjust the line height to vertically center the content */
+}
+.footer {
+    margin-top: 100px;
+}

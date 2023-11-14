@@ -76,7 +76,7 @@ namespace ClassLibrary_MainMenu
                 do
                 {
                     Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("Enter your choice: \n1. Add Employee\n2. Edit Employee\n3. Delete Employee\n4. View Employee\n5. Go Back\n6. Exit ");
+                    Console.WriteLine("Enter your choice:\n1. Add Employee\n2. Edit Employee\n3. Delete Employee\n4. View Employee\n5. Go Back\n6. Exit ");
                     int choice = int.Parse(Console.ReadLine());
                     Console.WriteLine("------------------------------------------");
                     switch (choice)
@@ -124,6 +124,7 @@ namespace ClassLibrary_MainMenu
 
                             employeeBALL.AddEmployee_BAL(EmpID, Emp_FName, Emp_FName, Address, Contact, DOB);
                             Console.WriteLine("You entered {0}, {1}, {2}, {3}, {4}, {5}", EmpID, Emp_FName, Emp_LName, Address, Contact, DOB);
+                            _empManager.ViewAllEmployee_BAL();
                             break;
                         case 2:
                             Console.WriteLine("------------------------------");
@@ -136,11 +137,20 @@ namespace ClassLibrary_MainMenu
                             e.empId = int.Parse(Console.ReadLine());
                             Employee emp_to_Change = employeeBALE.GetEmpByID_BAL(e.empId);
 
-                            Console.WriteLine(" 1.Edit First Name\n2.Last Name\n3.Edit DOB\n4.Edit Address\n5. Edit Contact\n6. Go Back");
-                            Console.WriteLine("Select Choice 1 to 7\n");
+                            Console.WriteLine("1.Edit First Name\n2.Edit Last Name\n3.Edit Address\n4.Edit Contact\n5. Edit DOB\n6. Go Back");
+                            Console.WriteLine("Select Choice 1 to 6\n");
                             int choice1 = int.Parse(Console.ReadLine());
-                            try
+
+                            
+
+                            if (emp_to_Change == null)
                             {
+                                Console.WriteLine("\nTravel Request with Id does not exist in the list!!!");
+                                Console.WriteLine("Please Enter Req Id From above table.");
+                            }
+                            else
+                            {
+
                                 switch (choice1)
                                 {
                                     case 1:
@@ -176,16 +186,11 @@ namespace ClassLibrary_MainMenu
                                         Console.WriteLine("Invalid Choice");
                                         break;
                                 }
+                                }
                                 _empManager.EditEmployee_BAL(emp_to_Change);
                                 _empManager.ViewAllEmployee_BAL();
                                
-                            }
                             
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine("Please enter correct choice...");
-                                Console.WriteLine(ex.Message);
-                            }
                              break;
 
 
@@ -237,8 +242,7 @@ namespace ClassLibrary_MainMenu
         public void ManageTravelRequest()
         {
             bool continueMenu = true;
-            try
-            {
+ 
                 do
                 {
                     Console.WriteLine("------------------------------------------");
@@ -255,7 +259,9 @@ namespace ClassLibrary_MainMenu
                             Console.WriteLine("------------------------------");
                             Console.WriteLine("        Raise Travel Request        ");
                             Console.WriteLine("------------------------------");
-
+                            _trManager.ViewJoinReqTable_BAL();
+                            _trManager.ViewAllRequest_BAL();
+                            //_empManager.ViewAllEmployee_BAL();
                             Console.WriteLine("Enter Request ID: \n");
                             reqId = int.Parse(Console.ReadLine());
                             Console.WriteLine("Enter Employee ID: \n");
@@ -270,8 +276,13 @@ namespace ClassLibrary_MainMenu
 
                             break;
                         case 2:
-                            Console.WriteLine("------------------------------");
-                            Console.WriteLine("View travel request");
+                        Console.WriteLine("------------------------------");
+                        Console.WriteLine("View  travel requests");
+                        Console.WriteLine("------------------------------");
+                        _trManager.ViewAllRequest_BAL();
+                        Console.WriteLine();
+                        Console.WriteLine("------------------------------");
+                            Console.WriteLine("View Joint List");
                             Console.WriteLine("------------------------------");
                             _trManager.ViewJoinReqTable_BAL();
                             break;
@@ -291,7 +302,7 @@ namespace ClassLibrary_MainMenu
                             Console.WriteLine("Approve request");
                             Console.WriteLine("------------------------------");
                             TravelRequestBAL trBALA = new TravelRequestBAL();
-                            _trManager.ViewAllRequest_BAL();
+                            _trManager.ViewPendingRequests_BAL();
                             Console.WriteLine("Enter reqId you want to approve or deny: ");
                             int rid = int.Parse(Console.ReadLine());
                             Console.WriteLine("Enter 1 if  you want to approve and 0 if you want to deny: ");
@@ -300,39 +311,52 @@ namespace ClassLibrary_MainMenu
                             currentS current_status = currentS.Close;
                             if (aord == 1)
                             {
-                                approve_status = approveS.Approved;
+                               // approve_status = approveS.Approved;
+                               // current_status = currentS.Open;
+                                trBALA.ApproveStatus_BAL(rid,approveS.Approved, currentS.Open);
                             }
                             else if (aord == 0)
                             {
-                                approve_status = approveS.Denied;
-                                current_status = currentS.Close;
+                                //approve_status = approveS.Denied;
+                                //current_status = currentS.Close;
+                                trBALA.ApproveStatus_BAL(rid, approveS.Denied, currentS.Close);
+                                //trBALA.ViewNotApprovedRequests_BAL();
 
                             }
-                            trBALA.ApproveStatus_BAL(rid, approve_status, current_status);
+                            
                             break;
                         case 5:
                             Console.WriteLine("------------------------------");
                             Console.WriteLine("Confirm booking");
                             Console.WriteLine("------------------------------");
                             TravelRequestBAL trBALC = new TravelRequestBAL();
-                            _trManager.ViewApprovedRequests_BAL();
-                            Console.WriteLine("Enter reqId you want to confirm booking of: ");
-                            int r_id = int.Parse(Console.ReadLine());
-                            Console.WriteLine("Enter 1 if  you want to confirm booking of and 0 if you dont want to confirm booking of: ");
-                            int corn = int.Parse(Console.ReadLine());
-                            confirmB confirm_booking = confirmB.Not_Confirmed;
-                            current_status = currentS.Open;
-                            if (corn == 1)
+                            try
                             {
-                                confirm_booking = confirmB.Confirmed;
-                                current_status = currentS.Close;
+                                _trManager.ViewApprovedRequests_BAL();
+                                Console.WriteLine("Enter reqId you want to confirm booking of: ");
+                                int r_id = int.Parse(Console.ReadLine());
+                                Console.WriteLine("Enter 1 if  you want to confirm booking of and 0 if you dont want to confirm booking of: ");
+                                int corn = int.Parse(Console.ReadLine());
+                                confirmB confirm_booking = confirmB.Not_Confirmed;
+                                current_status = currentS.Open;
+                                if (corn == 1)
+                                {
+                                    //confirm_booking = confirmB.Confirmed;
+                                    //current_status = currentS.Close;
+                                trBALC.ConfirmBooking_BAL(r_id, confirmB.Confirmed, currentS.Close);
                             }
-                            else if (corn == 0)
+                                else if (corn == 0)
+                                {
+                                //confirm_booking = confirmB.Not_Confirmed;
+                                //current_status = currentS.Close;
+                                trBALC.ConfirmBooking_BAL(r_id, confirmB.Not_Confirmed, currentS.Close);
+                            }
+                                
+                            }catch(Exception ex)
                             {
-                                confirm_booking = confirmB.Not_Confirmed;
-                                current_status = currentS.Close;
+                                Console.WriteLine("Please enter correct choice from above table...");
+                                Console.WriteLine(ex.Message);
                             }
-                            trBALC.ConfirmBooking_BAL(r_id, confirm_booking, current_status);
                             break;
                         case 6:
                             Console.WriteLine("------------------------------");
@@ -340,18 +364,32 @@ namespace ClassLibrary_MainMenu
                             Console.WriteLine("------------------------------");
                             _trManager.ViewAllRequest_BAL();
                             TravelRequestBAL employeeBALE = new TravelRequestBAL();
-                            TravelRequest e = new TravelRequest();
-                            Console.WriteLine("Enter Id you want to change: ");
-                            e.reqId = int.Parse(Console.ReadLine());
-                            TravelRequest emp_to_Change = employeeBALE.GetReqByID_BAL(e.reqId);
-                            Console.WriteLine("1.Edit Emp Id\n2.Edit Location from\n3.Edit Location to\n4.Go Back");
-                            Console.WriteLine("Select Choice 1 to 7\n");
+                            //TravelRequest e = new TravelRequest();
+                            Console.WriteLine("Enter reqId you want to change: ");
+                            //e.reqId = int.Parse(Console.ReadLine());
+                            int reqId1 = int.Parse(Console.ReadLine());
+                            TravelRequest emp_to_Change = employeeBALE.GetReqByID_BAL(reqId1);
+                            if (emp_to_Change == null)
+                        {
+                            Console.WriteLine("Travel request with reqId {0} does not exist.", reqId1);
+                            break; // Exit the case
+                        }
+                        Console.WriteLine("1.Edit Emp Id\n2.Edit Location from\n3.Edit Location to\n4.Go Back");
+                            Console.WriteLine("Select Choice 1 to 4\n");
                             int choice1 = int.Parse(Console.ReadLine());
+                        if (emp_to_Change == null)
+                        {
+                            Console.WriteLine("\nTravel Request with Id does not exist in the list!!!");
+                            Console.WriteLine("Please Enter Req Id From above table.");
+                        }
+                        else
+                        {
                             switch (choice1)
                             {
                                 case 1:
                                     Console.WriteLine("Edit  Emp Id: \n");
                                     emp_to_Change.empId = int.Parse(Console.ReadLine());
+                                    //if(emp_to_Change.empId!=Employee.empId)
                                     break;
                                 case 2:
                                     Console.WriteLine("Edit Location from: \n");
@@ -359,7 +397,7 @@ namespace ClassLibrary_MainMenu
                                     break;
                                 case 3:
                                     Console.WriteLine("Edit Location to: \n");
-                                    emp_to_Change.location_from = Console.ReadLine();
+                                    emp_to_Change.location_to = Console.ReadLine();
                                     break;
 
                                 case 4:
@@ -371,10 +409,10 @@ namespace ClassLibrary_MainMenu
                                     Console.WriteLine("Invalid Choice");
                                     break;
                             }
-
+                        }
 
                             _trManager.EditRequest_BAL(emp_to_Change);
-                            _trManager.ViewConfirmedRequests_BAL();
+                            _trManager.ViewAllRequest_BAL();
                             break;
                         case 7:
                             Console.WriteLine("View All Approved Travel Request");
@@ -427,12 +465,7 @@ namespace ClassLibrary_MainMenu
                     continueMenu = (response == 'y' || response == 'Y');
                     Console.WriteLine("------------------------------------------");
                 } while (continueMenu);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Please enter correct choice...");
-                Console.WriteLine(ex.Message);
-            }
+            
         }
     }
 }

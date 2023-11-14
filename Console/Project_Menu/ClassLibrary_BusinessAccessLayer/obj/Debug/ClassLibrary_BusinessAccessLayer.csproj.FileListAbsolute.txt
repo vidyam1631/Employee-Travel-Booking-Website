@@ -9,3 +9,14 @@ D:\source\repos\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLib
 D:\source\repos\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.csproj.CopyComplete
 D:\source\repos\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.dll
 D:\source\repos\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\bin\Debug\ClassLibrary_BusinessAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\bin\Debug\ClassLibrary_BusinessAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\bin\Debug\ClassLibrary_DataAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\bin\Debug\ClassLibrary_ProjectMenu.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\bin\Debug\ClassLibrary_DataAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\bin\Debug\ClassLibrary_ProjectMenu.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.csproj.AssemblyReference.cache
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.csproj.CopyComplete
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_BusinessAccessLayer\obj\Debug\ClassLibrary_BusinessAccessLayer.pdb

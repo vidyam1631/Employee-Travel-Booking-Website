@@ -19,6 +19,7 @@ namespace ClassLibrary_DataAccessLayer
                 new Employee() { empId = 2, empFname = "Akansha", empLName = "Bhagat", empAddress = "Pune", empContactNo = "9156576787", empDob = DateTime.Parse("07-05-1990") },
                 new Employee() { empId = 3, empFname = "Suhani", empLName = "Gaikwad", empAddress = "Pune", empContactNo = "9156576787", empDob = DateTime.Parse("07-05-1990") },
                 new Employee() { empId = 4, empFname = "Akansha", empLName = "Bhagat", empAddress = "Pune", empContactNo = "9156576787", empDob = DateTime.Parse("07-05-1990") },
+                new Employee() { empId = 5, empFname = "Sakshi", empLName = "Banakar", empAddress = "Pune", empContactNo = "9156576787", empDob = DateTime.Parse("07-05-1990") }
           };
 
 
@@ -30,20 +31,28 @@ namespace ClassLibrary_DataAccessLayer
             // create a new Employee Class
             //Employee emp = new Employee(e_Id, e_Name, e_salary, e_Address, e_Contact, e_Dob);
 
-
-
-            lstemployees.Add(new Employee() { 
-               empId=empId,
-                empFname=empFname, 
-                empLName=empLName,
-                empAddress=empAddress,
-                empContactNo=empContactNo,
-                empDob=empDob
+            foreach (Employee employee in lstemployees)
+            {
+                if (employee.empId == empId)
+                {
+                    Console.WriteLine("This empId already exist cannot add another employee with same empId!!!\n");
+                    return 0;
+                } 
+            }
+            lstemployees.Add(new Employee()
+            {
+                empId = empId,
+                empFname = empFname,
+                empLName = empLName,
+                empAddress = empAddress,
+                empContactNo = empContactNo,
+                empDob = empDob
             });
+
             // In memory data
 
             //Console.WriteLine(emp.ToString());
-            
+
             return 1;
         }
         public  Employee GetEmpByID_DAL(int empId)
@@ -78,7 +87,7 @@ namespace ClassLibrary_DataAccessLayer
             Console.WriteLine("--------------------------------------------------------------------------------------------------");
             Console.WriteLine("                                          View All Employees");
             Console.WriteLine("--------------------------------------------------------------------------------------------------");
-            Console.WriteLine("|{0,-10}| |{1,-10}| |{2,-10}| |{3,-18}| |{4,-20}| |{5,-20}|", "EmpId", "FName", "LName", "Address", "Contact", "DOB");
+            Console.WriteLine("{0,-10} {1,-10} {2,-10} {3,-18} {4,-20} {5,-20}", "EmpId", "FName", "LName", "Address", "Contact", "DOB");
             Console.WriteLine("--------------------------------------------------------------------------------------------------");
             foreach (Employee employee in lstemployees)
            {

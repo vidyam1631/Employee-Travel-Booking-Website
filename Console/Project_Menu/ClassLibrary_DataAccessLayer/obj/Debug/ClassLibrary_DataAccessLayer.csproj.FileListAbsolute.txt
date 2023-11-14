@@ -7,3 +7,12 @@ D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary
 D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.CopyComplete
 D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.dll
 D:\source\repos\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_DataAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_DataAccessLayer.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_ProjectMenu.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\bin\Debug\ClassLibrary_ProjectMenu.pdb
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.AssemblyReference.cache
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.csproj.CopyComplete
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.dll
+D:\Employee Travel Booking App\Console\Project_Menu\ClassLibrary_DataAccessLayer\obj\Debug\ClassLibrary_DataAccessLayer.pdb

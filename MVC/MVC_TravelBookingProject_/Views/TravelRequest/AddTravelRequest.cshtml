@@ -1,0 +1,30 @@
+﻿@model TravelRequest
+
+<center><h2>Add TravelRequest</h2></center>
+<br />
+<div class="container">
+    <div class="form-container">
+    <form method="post">
+        <div class="form-group">
+            <label for="empId">EmpId</label>
+            <select asp-items=@ViewBag.Employees asp-for="EmpId">
+                <option value="">Select Employee</option>
+            </select>
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="catcode">Location From:</label>
+            @Html.EditorFor(m=>m.LocationFrom)
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="catdesc">Location To:</label>
+            @Html.EditorFor(m=>m.LocationTo)
+        </div>
+        <br />
+        <div class="btn-container">
+            <button class="btn btn-outline-success" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model Employee
+<center><h2>Update Employee</h2></center>
+<div class="container">
+    <div class="form-container">
+        <form method="post">
+            <div class="form-group">
+                <label for="EmpId">Request Id:</label>
+                <input asp-for="EmpId" readonly value=@Model.EmpId class="form-control" name="EmpId" />
+            </div>            
+            <div class="form-group">
+                <label for="EmpFname">Employee Firstname</label>
+                <input asp-for="EmpFname" value=@Model.EmpFname class="form-control" name="EmpFname" required />
+            </div>
+            <div class="form-group">
+                <label for="EmpLname">Employee Lastname</label>
+                <input asp-for="EmpLname" type="datetime" value=@Model.EmpLname class="form-control" name="EmpLname" required />
+            </div>
+            <div class="form-group">
+                <label for="EmpAddress">Employee Address</label>
+                <input asp-for="EmpAddress" value=@Model.EmpAddress class="form-control" name="EmpAddress"  />
+            </div>
+
+            <div class="form-group">
+                <label for="EmpContact">Employee Contact</label>
+                <input asp-for="EmpContact" value=@Model.EmpContact class="form-control" name="EmpContact" required />
+            </div>
+            <div class="form-group">
+                <label for="EmpDob">Employee Dob</label>
+                <input asp-for="EmpDob" type="datetime" value=@Model.EmpDob class="form-control" name="EmpDob" />
+            </div>
+            <div class="btn-container">
+                <button class="btn " type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
